@@ -1,3 +1,120 @@
-.NavBottom{
-    background-color: $dark-300;
+.navBottom {
+    background-color: $dark-200;
+
+    &__container {
+        position: relative;
+        max-width: 1440px;
+        padding: 0px 8px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 65px;
+        color: white;
+        border-bottom: 2px solid $dark-100;
+    }
+
+    &__menuBtn{
+        width: 30px;
+        height: 30px;
+        display: none;
+        @include breakpoint-down('md') {
+            display: block;
+        }
+    }
+
+    &__logo {
+        @include breakpoint-down('md') {
+            display: none;
+        }
+    }
+
+
+    &__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        height: 100%;
+
+        @include breakpoint-down('md') {
+            gap: 14px;
+        }
+
+        svg{
+            width: 30px;
+            height: 30px;
+            @include breakpoint-down('md') {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+
+
+    //// styling auth buttons
+    &__auth {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        @include breakpoint-down('md'){
+            display: none;
+        }
+
+        a {
+            background-color: transparent;
+            cursor: pointer;
+            color: white;
+            padding: 8px 16px;
+            font-weight: 600;
+            font-size: 12px;
+            border: 1px solid $primary-100;
+            transition: 0.3s ease-in-out;
+            border-radius: 6px;
+            user-select: none;
+
+            &:first-child {
+                background-color: $primary-100 ;
+                border: 1px solid $primary-200 ;
+            }
+
+            &:nth-child(2) {
+                background-color: $secondary-200 ;
+                border: 1px solid $secondary-200 ;
+            }
+
+            &:hover {
+                filter: brightness(85%);
+            }
+        }
+    }
+
+
+    &__searchBar{
+        background-color: $dark-400;
+        width: 100%;
+        position: absolute;
+        top: 110%;
+        left: 0;
+        height: 300px;
+        transition: all 2s ease ;
+        transform-origin: top;
+        animation: searchBarAnimation 0.5s ease-in-out ;
+    }
+
 }
+
+
+/// animate the menu when open
+@keyframes searchBarAnimation {
+    0% {
+        transform: scaleY(0);
+      
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+

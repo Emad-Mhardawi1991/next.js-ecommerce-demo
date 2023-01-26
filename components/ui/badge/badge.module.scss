@@ -1,0 +1,21 @@
+.badge{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span{
+        background-color: $primary-200;
+        position: absolute;
+        top: -10px;
+        right: -8px;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        font-weight: 700;
+    }
+}

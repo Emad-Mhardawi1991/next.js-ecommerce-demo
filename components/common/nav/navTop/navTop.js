@@ -9,7 +9,7 @@ const NavTop = () => {
       <div className={styles.navTop__container}>
         <ul className={styles.navTop__list}>
           <li>
-            <Image src="/flag.png" width={20} height={20} />
+            <Image src="/flag.png" width={20} height={20}  alt='flag'/>
             <span>Brazil / usd</span>
           </li>
           <li>

@@ -1,0 +1,53 @@
+.userMenu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    svg{
+        width: 25px;
+        height: 25px;
+    }
+
+    h6{
+        font-size: 15px;
+    }
+
+
+    ul {
+        width: 100%;
+        
+
+        li{
+            padding: 13px 0;
+            &:hover{
+                background-color: $dark-300;
+            }
+        }
+
+        a{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+        }
+    }
+
+
+    button{
+        width: 100%;
+        padding: 8px;
+        border-radius: 6px;
+        background-color: $secondary-200;
+        border: 1px solid $secondary-200;
+        color: white;
+        cursor: pointer;
+
+        &:hover{
+            filter: brightness(85%);
+        }
+    }
+}
